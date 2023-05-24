@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>requestRow</title>
+</head>
+<body>
+    <canvas id="sketch" width="600" height="600"></canvas>
+
+    <script>
+        var sketch = document.getElementById("sketch");
+        var context = sketch.getContext("2d");
+
+        context.fillStyle =  "#F233D9";
+
+        var rowstring = prompt("Number of circle, please?");
+        var rownum = parseInt(rowstring);
+
+        for(var i = 1; i <= rownum; i++){
+            context.beginPath();
+            context.arc(40, (i * 50), 20, 0, 2 * Math.PI, true);
+            context.closePath();
+            context.fill();
+        }
+
+    </script>
+    
+</body>
+</html>
